@@ -16,9 +16,13 @@ jobs:
     - name: Install dependencies
       run: npm install  # Adjust if you're using Yarn or another package manager
 
+    - name: Install Surge
+      run: npm install --global surge  # Instala Surge globalmente
+
     - name: Deploy to Surge
       env:
         SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
       run: |
-        npx surge ./src abner-pl.surge.sh --token ca63b5e94c0dcd9fc946f572f2367af7
+        surge ./src abner-pl.surge.sh --token $SURGE_TOKEN
+
 
