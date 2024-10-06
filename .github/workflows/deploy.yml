@@ -20,5 +20,5 @@ jobs:
       env:
         SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
       run: |
-        npx surge ./src abner-pl.surge.sh --token ca63b5e94c0dcd9fc946f572f2367af7
+        npx surge ./src abner-pl.surge.sh --token $Surge_token
 
