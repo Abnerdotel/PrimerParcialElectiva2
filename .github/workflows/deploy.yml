@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
 
     - name: Install dependencies
       run: npm install  # Adjust if you're using Yarn or another package manager
@@ -21,3 +21,4 @@ jobs:
         SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
       run: |
         npx surge ./src abner-pl.surge.sh --token $SURGE_TOKEN
+
